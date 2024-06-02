@@ -12,7 +12,7 @@ const Login = () => {
     e.preventDefault();
     try {
       await authService.login(email, password);
-      goto("/dashboard");
+      goto("/");
     } catch (err) {
       setError("Invalid credentials");
     }

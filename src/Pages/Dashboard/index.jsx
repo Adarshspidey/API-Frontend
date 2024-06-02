@@ -39,10 +39,10 @@ const Dashboard = () => {
           Logout
         </button>
       </div>
-      Dashboard
-      {data.map((val, index) => (
+      Dashboard <button onClick={()=>{goto("/form")}}>Add User</button>
+      {!error ?data.map((val, index) => (
         <Usertable name={val.name} mark={val.mark} age={val.age} profilePic={val.profilePic} />
-      ))}
+      )):error}
     </div>
   );
 };
